@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'mycss.css' %}">
+</head>
+<body>
+    <div class="page-title">
+    <h1>Glass Classification</h1>
+    <p>Enter the chemical properties of the glass sample</p>
+</div>
+    <div class="card">
+
+    <form action="{% url 'result' %}" method="GET">
+        {% csrf_token %}
+        <div class="form-group">
+            <label>RI (Refractive Index)</label>
+            <input type="text" name="RI"
+                   placeholder="Enter RI value" required>
+        </div>
+
+        <div class="form-group">
+            <label>Na (Sodium)</label>
+            <input type="text" name="Na"
+                   placeholder="Enter Na value" required>
+        </div>
+
+        <div class="form-group">
+            <label>Mg (Magnesium)</label>
+            <input type="text" name="Mg"
+                   placeholder="Enter Mg value" required>
+        </div>
+
+        <div class="form-group">
+            <label>Al (Aluminum)</label>
+            <input type="text" name="Al"
+                   placeholder="Enter Al value" required>
+        </div>
+
+        <div class="form-group">
+            <label>Si (Silicon)</label>
+            <input type="text" name="Si"
+                   placeholder="Enter Si value" required>
+        </div>
+
+        <div class="form-group">
+            <label>K (Potassium)</label>
+            <input type="text" name="K"
+                   placeholder="Enter K value" required>
+        </div>
+
+        <div class="form-group">
+            <label>Ca (Calcium)</label>
+            <input type="text" name="Ca"
+                   placeholder="Enter Ca value" required>
+        </div>
+
+        <div class="form-group">
+            <label>Ba (Barium)</label>
+            <input type="text" name="Ba"
+                   placeholder="Enter Ba value" required>
+        </div>
+
+        <div class="form-group">
+            <label>Fe (Iron)</label>
+            <input type="text" name="Fe"
+                   placeholder="Enter Fe value" required>
+        </div>
+
+        <button type="submit" class="submit-btn">
+            Predict Glass Type
+        </button>
+
+    </form>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'mycss.css' %}">
+</head>
+<body>
+    <form action="{% url 'saveuser' %}" method='post'>
+        {% csrf_token %}
+        <div>
+            <label for="eno">Employee Number</label>
+        </div>
+        <div>
+            <input type="Number" name="eno" id="eno"></input>
+        </div>
+        <div>
+            <label for="ename">Employee Name</label>
+        </div>
+        <div>
+            <input type="text" name="ename" id="ename"></input>
+        </div>
+        <div>
+            <label for="esal">Employee Salary</lable>
+        </div>
+        <div>
+            <input type="Number" name="esal" id="esal"></input>
+        </div>
+        <div>
+            <label for="eno">Employee Number</label>
+        </div>
+        <div>
+            <input type="submit" value="save Employee"></input>
+        </div>
+    </form>
+</body>
+</html>

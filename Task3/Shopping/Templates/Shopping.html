@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shopping Hub</title>
+
+    <link rel="stylesheet" href="{% static 'mystatic.css' %}">
+</head>
+
+<body style="text-align: center;">
+
+    <div class="header">
+        <h1>Shopping Hub</h1>
+        <p>Choose your shopping website</p>
+    </div>
+
+    <div class="shopping-container">
+        <div class="shop-card">
+            <h2>Amazon</h2>
+            <img src="{% static 'amazon.jpg' %}" width="200"
+     height="100"
+     alt="Amazon">`
+
+
+            <a href="https://www.amazon.in/" target="_blank">
+                <button>Visit Amazon</button>
+            </a>
+        </div>
+
+
+        <div class="shop-card">
+            <h2>Flipkart</h2>
+            <img src="{% static 'flipkart.png' %}" width="200"
+     height="100"
+     alt="Flipkart">
+>
+
+            <a href="https://www.flipkart.com/" target="_blank">
+                <button>Visit Flipkart</button>
+            </a>
+        </div>
+
+        
+        <div class="shop-card">
+            <h2>Meesho</h2>
+            <img src="{% static 'mesho.jpg' %}" width="200"
+     height="100"
+     alt="Meesho">
+>
+
+            <a href="https://www.meesho.com/" target="_blank">
+                <button>Visit Meesho</button>
+            </a>
+        </div>
+
+    </div>
+
+
+    <div class="media-container">
+    <h2>Shopping Animation</h2>
+    <div class="gif-row">
+        <!-- <img id="a1" src="{% static 'havingfunandsharing-delivery-20701.gif' %}" alt="Delivery animation"> -->
+        <img id="a2" src="{% static 'julientromeur-cartoon-1690.gif' %}" alt="Shopping animation">
+        <img id="a3" src="{% static 'julientromeur-cartoon-1693.gif' %}" alt="Shopping animation">
+    </div>
+</div>
+
+</body>
+</html>
+```

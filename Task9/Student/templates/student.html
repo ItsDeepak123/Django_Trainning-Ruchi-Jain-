@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><link rel="stylesheet" href="{% static 'mycss.css' %}">
+</head>
+<body>
+    <h1>Student Registration Page</h1><br><button type="button"><a href="{% url 'home' %}">Home</a></button>
+    {% if successmsg %}
+        <p style="color: green;">
+            {{ successmsg }}
+        </p>
+    {% endif %}
+
+    {% if errormsg %}
+        <p style="color: red;">
+            {{ errormsg }}
+        </p>
+    {% endif %}
+    <form action="{% url 'studentsave' %}" method="post">
+    {% csrf_token %}
+        <div>
+            <label for='sid'>Student Id</label>
+        </div>
+        <div>
+            <input type="number" name="sid" id="sid" required>
+            
+        </div>
+        <div>
+            <label for='sname'>Student Name</label>
+        </div>
+        <div>
+            <input type="sname" name="sname" id="sname" required>
+        </div>
+        <div>
+            <label for='sbranch'>Branch</label>
+        </div>
+        <div>
+            <input type="text" name="sbranch" id="sbranch" required>
+        </div><span>{{errormsg}}</span>
+        <div>
+            <button type="submit" >Submit</button>
+            <br><button type="button"><a href="{% url 'msg' %}">Home</a></button>
+        </div>
+    </form>
+</body>
+</html>

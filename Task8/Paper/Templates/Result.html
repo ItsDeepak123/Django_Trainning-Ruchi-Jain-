@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+<head>
+
+    <title>Result</title>
+
+    <link rel="stylesheet"
+          href="{% static 'Main.css' %}">
+
+</head>
+
+<body>
+
+<div class="result-container">
+
+    <h1>Test Result</h1>    
+
+    <h2>Your Score</h2>
+
+    <div class="score">
+
+        {{ score }} / {{ total }}
+
+    </div>
+
+    <p>
+        Correct Answers: {{ score }}
+    </p>
+
+    <p>
+        Wrong Answers: {{ total|add:"-"|add:score }}
+    </p>
+
+    <a href="{% url 'testpaper' %}" class="btn">
+        Back to Test Papers
+    </a>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.header {
+    text-align: center;
+    background-color: cornflowerblue;
+    padding: 20px;
+    color: white;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.shopping-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+}
+
+.shop-card {
+    background-color: white;
+    width: 220px;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px gray;
+}
+
+.shop-card h2 {
+    margin-bottom: 20px;
+}
+
+.shop-card button {
+    background-color: cornflowerblue;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.shop-card button:hover {
+    background-color: royalblue;
+}
+
+.media-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.media-container img {
+    border-radius: 10px;
+}
+.gif-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.gif-row img {
+    
+    object-fit: contain;
+    flex-shrink: 0;
+}
+a1{
+    width:150px;
+    height: 25px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+a2{
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+a3{
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+    flex-shrink: 0;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'mycss.css' %}">
+</head>
+<body>
+    <h1>Signup Page</h1>
+    <form action="{% url 'saveuser' %}" method="post">
+    {% csrf_token %}
+        <div>
+            <label for='username'>username</label>
+        </div>
+        <div>
+            <input type="text" name="username" id="username" required>
+            <span>{{errormsg}}</span>
+        </div>
+        <div>
+            <label for='password'>Password</label>
+        </div>
+        <div>
+            <input type="password" name="password" id="password" required>
+        </div>
+        <div>
+            <label for='sname'>Name</label>
+        </div>
+        <div>
+            <input type="text" name="sname" id="sname" required>
+        </div>
+        <div>
+            <label for='sid'>Student Id</label>
+        </div>
+        <div>
+            <input type="number" name="sid" id="sid" required>
+        </div><div>
+            <label for='scontact'>Contact Number</label>
+        </div>
+        <div>
+            <input type="number" name="scontact" id="scontact" required>
+        </div><div>
+            <label for='semail'>Email ID</label>
+        </div>
+        <div>
+            <input type="email" name="semail" id="semail" required>
+        </div>
+        <div>
+            <button type="submit"><Submit</button>
+        </div>
+    </form>
+    <br>
+        <a href="{% url 'login1' %}">
+        Already have an account? Login
+        </a>
+</body>
+</html>

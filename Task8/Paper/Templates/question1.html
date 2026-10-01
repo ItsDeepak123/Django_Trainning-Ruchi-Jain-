@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+<head>
+
+    <title>Question Paper 1</title>
+
+    <link rel="stylesheet"
+          href="{% static 'Main.css' %}">
+
+</head>
+
+<body>
+
+<div class="question-container">
+
+    <h1>Question Paper 1</h1>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <div class="question">
+
+            <h3>1. Which language is used for Python programming?</h3>
+
+            <label>
+                <input type="radio" name="q1" value="python" required>
+                Python
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="java">
+                Java
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="html">
+                HTML
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="css">
+                CSS
+            </label>
+
+        </div>
+
+
+        <div class="question">
+
+            <h3>2. Which language is used to create web page structure?</h3>
+
+            <label>
+                <input type="radio" name="q2" value="python">
+                Python
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="html" required>
+                HTML
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="java">
+                Java
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="c">
+                C
+            </label>
+
+        </div>
+
+
+        <div class="question">
+
+            <h3>3. Which framework is used with Python for web development?</h3>
+
+            <label>
+                <input type="radio" name="q3" value="django" required>
+                Django
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="react">
+                React
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="angular">
+                Angular
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="bootstrap">
+                Bootstrap
+            </label>
+
+        </div>
+
+
+        <button type="submit">
+            Submit Test
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

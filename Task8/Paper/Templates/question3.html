@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+<head>
+
+    <title>Question Paper 3</title>
+
+    <link rel="stylesheet"
+          href="{% static 'Main.css' %}">
+
+</head>
+
+<body>
+
+<div class="question-container">
+
+    <h1>Question Paper 3</h1>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <div class="question">
+
+            <h3>1. What is ML?</h3>
+
+            <label>
+                <input type="radio" name="q1" value="machine" required>
+                Machine Learning
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="web">
+                Web Language
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="database">
+                Database
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="network">
+                Network
+            </label>
+
+        </div>
+
+
+        <div class="question">
+
+            <h3>2. Which field works with collecting and analyzing information?</h3>
+
+            <label>
+                <input type="radio" name="q2" value="data" required>
+                Data Science
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="gaming">
+                Gaming
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="drawing">
+                Drawing
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="music">
+                Music
+            </label>
+
+        </div>
+
+
+        <div class="question">
+
+            <h3>3. AI stands for?</h3>
+
+            <label>
+                <input type="radio" name="q3" value="ai" required>
+                Artificial Intelligence
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="internet">
+                Internet Application
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="information">
+                Information Application
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="automatic">
+                Automatic Input
+            </label>
+
+        </div>
+
+
+        <button type="submit">
+            Submit Test
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

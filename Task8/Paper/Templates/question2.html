@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+<head>
+
+    <title>Question Paper 2</title>
+
+    <link rel="stylesheet"
+          href="{% static 'Main.css' %}">
+
+</head>
+
+<body>
+
+<div class="question-container">
+
+    <h1>Question Paper 2</h1>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <div class="question">
+
+            <h3>1. Which component is known as the brain of computer?</h3>
+
+            <label>
+                <input type="radio" name="q1" value="cpu" required>
+                CPU
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="ram">
+                RAM
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="harddisk">
+                Hard Disk
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="monitor">
+                Monitor
+            </label>
+
+        </div>
+
+
+        <div class="question">
+
+            <h3>2. Which memory is temporary?</h3>
+
+            <label>
+                <input type="radio" name="q2" value="rom">
+                ROM
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="harddisk">
+                Hard Disk
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="ram" required>
+                RAM
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="cd">
+                CD
+            </label>
+
+        </div>
+
+
+        <div class="question">
+
+            <h3>3. Computer understands data internally in which form?</h3>
+
+            <label>
+                <input type="radio" name="q3" value="decimal">
+                Decimal
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="binary" required>
+                Binary
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="english">
+                English
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="text">
+                Text
+            </label>
+
+        </div>
+
+
+        <button type="submit">
+            Submit Test
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

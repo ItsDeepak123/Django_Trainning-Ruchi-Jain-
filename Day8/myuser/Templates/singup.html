@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Signup Page</h1>
+    <form action="{% url 'saveuser' %}" method="post">
+    {% csrf_token %}
+        <div>
+            <label for='username'>username</label>
+        </div>
+        <div>
+            <input type="text" name="username" id="username" required>
+            <span>{{errormsg}}</span>
+        </div>
+        <div>
+            <label for='password'>Password</label>
+        </div>
+        <div>
+            <input type="password" name="password" id="password" required>
+        </div>
+        <div>
+            <label for='name'>Name</label>
+        </div>
+        <div>
+            <input type="text" name="name" id="name" required>
+        </div>
+        <div>
+            <label for='contact'>Contact</label>
+        </div>
+        <div>
+            <input type="number" name="contact" id="contact" required>
+        </div>
+        <div>
+            <button type="submit" value="Submit">Submit</button>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><link rel="stylesheet" href="{% static 'mycss.css' %}">
+</head>
+<body>
+    <div>
+        <h1>This is Login Page</h1>
+    </div>
+    <form action="{% url 'loginvalidation' %}"method="post">
+        <br>
+        <a href="{% url 'Signup' %}">Create New User</a>
+        {% csrf_token %}
+        <div>
+            <label for='username'>username</label>
+        </div>
+        <div>
+            <input type="text" name="username" id="username" required>
+            <span>{{errormsg}}</span>
+        </div>
+        <div>
+            <label for='password'>Password</label>
+        </div>
+        <div>
+            <input type="password" name="password" id="password" required>
+        </div>
+        <div>
+            <button type="submit" >Login</button>
+        </div>
+        <span>
+            {{erg}}
+        </span>
+    </form>
+    
+</body>
+</html>

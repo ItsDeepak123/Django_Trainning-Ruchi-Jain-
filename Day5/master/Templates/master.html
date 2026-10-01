@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static '.cc' %}">
+</head>
+<body>
+    <h1 style="color: blue; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: medium; text-align: center;">sagar Institude of Science and Technology</h1>
+
+    <div>
+        <img src="{% static 'sistec.jpg.jpeg' %}" alt="Sagar Group of Institutions" style="width: 100%; height: auto;">
+    </div>
+   
+        {% block content %}
+        {% endblock %}
+<h1>Welcome to My Website</h1>
+    
+</body>
+</html>
+

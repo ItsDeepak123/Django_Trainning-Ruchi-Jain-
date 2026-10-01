@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SISTec</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="{% static 'college.css' %}">
+
+</head>
+
+<body>
+
+    <!-- Top Section -->
+    <div class="top">
+
+        <h1>SISTec</h1>
+
+    </div>
+
+
+    <!-- Navigation Buttons -->
+    <div class="buttons">
+
+        <a href="{% url 'Main' %}">
+            <button class="home">Main</button>
+        </a>
+
+        <a href="{% url 'Sistec' %}">
+            <button class="about">Sistec </button>
+        </a>
+
+        <a href="{% url 'Lnct' %}">
+            <button class="courses">Lnct</button>
+        </a>
+
+        <a href="{% url 'Oist' %}">
+            <button class="contact">Oist</button>
+        </a>
+    </div>
+
+
+    <!-- College Name -->
+    <div class="college-name">
+
+        <h1>
+            Sagar Institute of Science and Technology
+        </h1>
+
+    </div>
+
+
+    <!-- College Details -->
+    <div class="details">
+
+        <h2>About SISTec</h2>
+
+        <p>
+            Sagar Institute of Science and Technology (SISTec)
+            is an educational institution located in Bhopal,
+            Madhya Pradesh.
+        </p>
+
+        <p>
+            SISTec provides education in engineering,
+            technology and management.
+        </p>
+
+        <h2>Departments</h2>
+
+        <p>
+            Computer Science and Engineering
+            <br>
+            Artificial Intelligence and Data Science
+            <br>
+            Electronics and Communication Engineering
+            <br>
+            Mechanical Engineering
+            <br>
+            Civil Engineering
+        </p>
+
+    </div>
+
+</body>
+
+</html>
+```

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee details</title>
+</head>
+<body>
+    <div>
+        <h1>Employee Details</h1>
+        <table border="1">
+            <tr>
+                <th>Employee ID</th> 
+                <th>Employee Name</th>
+                <th>Employee Salary</th>
+            </tr>
+            {% for i in employees %}
+            <tr>
+                <td><a href="http://localhost:8000/database1/update_employeeform/?id={{i.id}}">{{ i.eno }}</a></td>
+                <td><a>{{ i.ename }}</a></td>
+                <td>{{ i.esal }}</td>
+                <td><a href="http://localhost:8000/database1/delete_employee/?id={{i.id}}">Delete</a></td>
+            </tr>
+            {% endfor %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management System</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color:cadetblue;
+            min-height: 100vh;
+        }
+
+        /* Header */
+
+        .header {
+            background-color: #18a4dc;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            color: #ccc;
+            font-size: 16px;
+        }
+
+
+        /* Main Container */
+
+        .container {
+            width: 85%;
+            max-width: 1000px;
+            margin: 40px auto;
+            background-color:burlywood;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* Buttons */
+
+        .button-box {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 25px 0 35px;
+        }
+
+        .button-box a {
+            text-decoration: none;
+        }
+
+        .button-box button {
+            border: none;
+            padding: 13px 25px;
+            border-radius: 7px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            min-width: 150px;
+            transition: 0.3s;
+        }
+
+        .create {
+            background-color: #28a745;
+        }
+
+        .delete {
+            background-color: #dc3545;
+        }
+
+        .update {
+            background-color: #007bff;
+        }
+
+        .show {
+            background-color: #6f42c1;
+        }
+
+        .button-box button:hover {
+            transform: translateY(-2px);
+            opacity: 0.85;
+        }
+
+
+        /* Table Heading */
+
+        .table-heading {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+
+        /* Table */
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #222;
+            color: white;
+            padding: 14px;
+            text-align: center;
+        }
+
+        td {
+            padding: 13px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+
+        /* No Data */
+
+        .no-data {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+        }
+
+
+        /* Footer */
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #777;
+            font-size: 14px;
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+
+            .container {
+                width: 95%;
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 25px;
+            }
+
+            .button-box {
+                flex-direction: column;
+            }
+
+            .button-box button {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- Header -->
+
+    <div class="header">
+
+        <h1>Student Management System</h1>
+
+        <p>Manage Student Records</p>
+
+    </div>
+
+
+
+    <!-- Main Container -->
+
+    <div class="container">
+
+
+        <!-- Buttons -->
+
+        <div class="button-box">
+
+
+            <!-- Create -->
+
+            <a href="{% url 'create' %}">
+
+                <button class="create">
+                    Create Student
+                </button>
+
+            </a>
+
+
+
+            <!-- Delete -->
+
+            <a href="{% url 'delete_student' %}">
+
+                <button class="delete">
+                    Delete Student
+                </button>
+
+            </a>
+
+
+
+            <!-- Update -->
+
+            <a href="{% url 'update_student' %}">
+
+                <button class="update">
+                    Update Student
+                </button>
+
+            </a>
+
+
+
+            <!-- Show -->
+
+            <a href="{% url 'studentlist' %}">
+
+                <button class="show">
+                    Show Student Data
+                </button>
+
+            </a>
+
+
+        </div>
+
+
+
+        <!-- Table Heading -->
+
+        <h2 class="table-heading">
+            Student Records
+        </h2>
+
+
+
+        <!-- Table -->
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Student ID</th>
+
+                        <th>Student Name</th>
+
+                        <th>Student Branch</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+
+                    {% for student in Student %}
+
+                    <tr>
+
+                        <td>
+                            {{ student.sid }}
+                        </td>
+
+                        <td>
+                            {{ student.sname }}
+                        </td>
+
+                        <td>
+                            {{ student.sbranch }}
+                        </td>
+
+                    </tr>
+
+                    {% empty %}
+
+                    <tr>
+
+                        <td colspan="3" class="no-data">
+                            No Student Data Found
+                        </td>
+
+                    </tr>
+
+                    {% endfor %}
+
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+
+        <!-- Footer -->
+
+        <div class="footer">
+
+            Student Management System
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>
+

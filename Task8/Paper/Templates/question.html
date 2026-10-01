@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+<head>
+
+    <title>Test Papers</title>
+
+    <link rel="stylesheet"
+          href="{% static 'Main.css' %}">
+
+</head>
+
+<body>
+
+<div class="test-container">
+
+    <h1>Online Test Papers</h1>
+
+    <p>
+        Select a question paper
+    </p>
+
+    <div class="paper-list">
+
+        <a href="{% url 'paper1' %}">
+            Question Paper 1
+        </a><br>
+<br>
+        <a href="{% url 'paper2' %}">
+            Question Paper 2
+        </a><br>
+
+        <a href="{% url 'paper3' %}">
+            Question Paper 3
+        </a><br>
+
+    </div>
+
+    <a href="{% url 'logout' %}" class="logout">
+        Logout
+    </a>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Lnct</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="{% static 'college.css' %}">
+
+</head>
+
+<body>
+
+    <!-- Top Section -->
+    <div class="top">
+
+        <h1>Oist</h1>
+
+    </div>
+
+
+    <!-- Navigation Buttons -->
+    <div class="buttons">
+
+        <a href="{% url 'Main' %}">
+            <button class="home">Main</button>
+        </a>
+
+        <a href="{% url 'Sistec' %}">
+            <button class="about">Sistec</button>
+        </a>
+
+        <a href="{% url 'Lnct' %}">
+            <button class="courses">Lnct</button>
+        </a>
+
+        <a href="{% url 'Oist' %}">
+            <button class="contact">Oist</button>
+        </a>
+    </div>
+
+
+    <!-- College Name -->
+    <div class="college-name">
+
+        <h1>
+                Oriented Institute of Science and Technology (OIST)    
+        </h1>
+
+    </div>
+
+
+    <!-- College Details -->
+    <div class="details">
+
+        <h2>About Oist</h2>
+
+        <p>
+            Oriental Campus, Opp. Patel Nagar, Raisen Road, Bhopal, Madhya Pradesh – 462022, India.
+        </p>
+
+        
+
+        <h2>Departments</h2>
+
+        <p>
+            Computer Science and Engineering
+            <br>
+            Artificial Intelligence and Data Science
+            <br>
+            Electronics and Communication Engineering
+            <br>
+            Mechanical Engineering
+            <br>
+            Civil Engineering
+        </p>
+
+    </div>
+
+</body>
+
+</html>
+```

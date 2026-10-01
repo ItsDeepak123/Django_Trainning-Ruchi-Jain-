@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'mycss.css' %}">
+</head>
+<body>
+    <form action="{% url 'saveuser' %}" method='post'>
+        {% csrf_token %}
+        <div>
+            <label for="pid">Product Number</label>
+        </div>
+        <div>
+            <input type="Number" name="pid" id="pid"></input>
+        </div>
+        <div>
+            <label for="pname">Product Name</label>
+        </div>
+        <div>
+            <input type="text" name="pname" id="pname"></input>
+        </div>
+        <div>
+            <label for="pprice">Product price</lable>
+        </div>
+        <div>
+            <input type="Number" name="pprice" id="pprice"></input>
+        </div>
+        <div>
+            <label for="p_offer">Product offer</label>
+        </div>
+        <div>
+            <input type="number" name="p_offer" id="p_offer"></input>
+        </div>
+            <div>
+                <input type="submit" value="Save">
+            </div>
+        
+
+    </form>
+</body>
+</html>

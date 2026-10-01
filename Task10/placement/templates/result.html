@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Placement Prediction Result</title>
+
+    <link rel="stylesheet"
+          href="{% static 'mycss.css' %}">
+
+</head>
+
+<body>
+
+<div class="result-card">
+
+    <h1 class="result-title">
+        Placement Prediction
+    </h1>
+
+    <p class="result-subtitle">
+        AI Based Student Placement Analysis
+    </p>
+
+    <div class="value-box">
+
+        <h2>Student Details</h2>
+
+        <div class="input-result">
+
+            <p>
+                <strong>CGPA:</strong>
+                {{ cgpa }}
+            </p>
+
+            <p>
+                <strong>IQ:</strong>
+                {{ iq }}
+            </p>
+
+            <p>
+                <strong>Profile Score:</strong>
+                {{ profile_score }}
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="answer-box">
+
+        <h2>Prediction Result</h2>
+
+
+        {% if Answer == 1 %}
+
+            <div class="placed">
+
+                <h1>PLACED</h1>
+
+                <p>
+                    According to the ML model,
+                    the student is predicted to be
+                    <strong>placed</strong>.
+                </p>
+
+            </div>
+
+
+        {% elif Answer == 0 %}
+
+            <div class="not-placed">
+
+                <h1>NOT PLACED</h1>
+
+                <p>
+                    According to the ML model,
+                    the student is predicted to be
+                    <strong>not placed</strong>.
+                </p>
+
+            </div>
+
+
+        {% else %}
+
+            <div class="unknown">
+
+                <h1>Prediction: {{ Answer }}</h1>
+
+                <p>
+                    The model returned an unexpected
+                    prediction value.
+                </p>
+
+            </div>
+
+        {% endif %}
+
+    </div>
+
+    <div class="summary-box">
+
+        <h2>Analysis Summary</h2>
+
+        <p>
+            The prediction is generated using
+            <strong>CGPA</strong>,
+            <strong>IQ</strong> and
+            <strong>Profile Score</strong>.
+        </p>
+
+    </div>
+
+
+    <a href="{% url 'Preduction' %}"
+       class="back-btn">
+
+        Predict Again
+
+    </a>
+
+
+</div>
+
+</body>
+
+</html>

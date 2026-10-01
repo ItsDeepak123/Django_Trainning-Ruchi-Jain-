@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Website Hub{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'mycss.css' %}">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            🌐 WEBSITE HUB
+        </div>
+
+        <nav>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'About' %}">About</a>
+            <a href="{% url 'city' %}">Info</a>
+        </nav>
+    </header>
+
+
+    <!-- PAGE CONTENT -->
+
+    {% block content %}
+
+    <!-- HOME CONTENT -->
+
+    <section class="hero">
+        <h1>Welcome to Website Hub</h1>
+        <p>Explore Phones, Laptops and Beautiful Cities</p>
+    </section>
+
+  
+    <div class="buttons">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'About' %}">About</a>
+        <a href="{% url 'city' %}">Info</a>
+    </div>
+
+
+    <h2>📱 Our Phones</h2>
+
+    <div class="phone-container">
+
+        <div class="card">
+            <img src="{% static 'm1.jpg' %}">
+            <h3>Phone 1</h3>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'm2.jpg' %}">
+            <h3>Phone 2</h3>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'm3.jpg' %}">
+            <h3>Phone 3</h3>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'm4.jpg' %}">
+            <h3>Phone 4</h3>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'm5.jpg' %}">
+            <h3>Phone 5</h3>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'm6.jpg' %}">
+            <h3>Phone 6</h3>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'm7.jpg' %}">
+            <h3>Phone 7</h3>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'm8.jpg' %}">
+            <h3>Phone 8</h3>
+        </div>
+
+    </div>
+
+    {% endblock %}
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        <p>© 2026 Website Hub | All Rights Reserved</p>
+        <p>Created by Deepak</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: darkgoldenrod;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* Header */
+.header {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 18px;
+    font-style: italic;
+}
+
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items:left;
+    gap: 15px;
+
+    background-color: white;
+    padding: 15px 30px;
+}
+
+
+/* Navigation Buttons */
+.nav-btn {
+    background-color: #007bff;
+    color: white;
+
+    text-decoration: none;
+
+    padding: 10px 20px;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+/* Button Hover */
+.nav-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+
+/* Home */
+/* Home */
+.home {
+    text-align: center;
+    padding: 50px 30px;
+    background-color: wheat; /* red ki jagah wheat */
+}
+
+.home h2 {
+    color: #007bff; /* white se blue karna better lagega wheat background pe */
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.intro {
+    max-width: 700px;
+    margin: auto;
+    color: #333; /* white se dark text rakho taaki readable ho */
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+
+
+/* Features */
+.features {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(220px, 1fr)
+    );
+
+    gap: 25px;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+
+/* Feature Box */
+.box {
+    background-color: white;
+
+    padding: 30px 20px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+    transition: 0.3s;
+}
+
+
+.box:hover {
+    transform: translateY(-8px);
+}
+
+
+.box h3 {
+    color: #007bff;
+
+    margin-bottom: 15px;
+
+    font-size: 22px;
+}
+
+
+.box p {
+    color: #555;
+
+    font-size: 16px;
+}
+
+
+/* Footer */
+footer {
+    background-color: #222;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 50px;
+}
+
+
+footer h2 {
+    color: #007bff;
+
+    margin-bottom: 10px;
+}
+
+
+footer p {
+    margin: 8px;
+}

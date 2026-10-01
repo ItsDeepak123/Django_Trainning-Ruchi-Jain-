@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Online Test Paper</title>
+
+    <link rel="stylesheet" href="{% static 'Main.css' %}">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>Online Test Paper</h1>
+        <p>Practice • Learn • Improve • Achieve</p>
+    </header>
+
+
+    <!-- Navigation -->
+    <nav class="navbar">
+
+        <a href="{% url 'Register' %}" class="nav-btn">
+            Registration
+        </a>
+
+        <a href="{% url 'login' %}" class="nav-btn">
+            Login
+        </a>
+
+    </nav>
+
+
+    <!-- Main Content -->
+    <main class="home">
+
+        <h2>Welcome to Online Test Paper</h2>
+
+        <p class="intro">
+            Welcome to our Online Test Paper platform.
+            Here students can practice questions and
+            improve their preparation for examinations.
+        </p>
+
+
+        <!-- Features -->
+        <div class="features">
+
+            <div class="box">
+                <h3>📝 Test Papers</h3>
+                <p>
+                    Practice well-structured test papers
+                    and improve your knowledge.
+                </p>
+            </div>
+
+
+            <div class="box">
+                <h3>📚 Easy Learning</h3>
+                <p>
+                    Learn important academic topics
+                    in an easy way.
+                </p>
+            </div>
+
+
+            <div class="box">
+                <h3>⏱ Practice</h3>
+                <p>
+                    Improve your speed and accuracy
+                    through regular practice.
+                </p>
+            </div>
+
+
+            <div class="box">
+                <h3>🎯 Achieve Goals</h3>
+                <p>
+                    Prepare better for examinations
+                    and achieve your goals.
+                </p>
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <h2>Online Test Paper</h2>
+
+        <p>
+            Practice regularly, improve your knowledge,
+            and achieve your goals.
+        </p>
+
+        <p>
+            © 2026 Online Test Paper | All Rights Reserved
+        </p>
+
+    </footer>
+
+</body>
+</html>

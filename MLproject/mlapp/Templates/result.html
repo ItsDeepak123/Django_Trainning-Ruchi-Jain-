@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Result Page</title>
+
+    <link rel="stylesheet" href="{% static 'mycss.css' %}">
+</head>
+
+<body>
+
+    <div class="result-card">
+
+        <h1 class="result-title">
+            This is Result Page
+        </h1>
+
+        <div class="value-box">
+            <h2>Entered Value by User</h2>
+
+            <p>
+                {{ List }}
+            </p>
+        </div>
+
+        <div class="answer-box">
+
+            <h2>
+                The Result is:
+            </h2>
+
+            <h1>
+                {{ Answer }}
+            </h1>
+
+        </div>
+
+        <div class="types-box">
+
+            <h2>Glass Types</h2>
+            {% if Answer==1 %}
+            <p>
+                Type 1 — Building windows, float processed:
+                <strong>70 samples</strong>
+            </p>
+            {% if Answer==2 %}
+            <p>
+                Type 2 — Building windows, non-float processed:
+                <strong>76 samples</strong>
+            </p>
+            {% if Answer==3 %}
+            <p>
+                Type 3 — Vehicle windows, float processed:
+                <strong>17 samples</strong>
+            </p>
+            {% if Answer==5 %}
+            <p>
+                Type 5 — Containers:
+                <strong>13 samples</strong>
+            </p>
+            {% if Answer==6 %}
+            <p>
+                Type 6 — Tableware:
+                <strong>9 samples</strong>
+            </p>
+            {% if Answer==7 %}
+            <p>
+                Type 7 — Headlamps:
+                <strong>29 samples</strong>
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

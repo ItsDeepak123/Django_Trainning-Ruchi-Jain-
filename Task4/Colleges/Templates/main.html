@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>College Portal</title>
+
+    <link rel="stylesheet" href="{% static 'college.css' %}">
+</head>
+
+<body>
+   
+<div class="video-box">
+
+    <video autoplay muted loop>
+        <source src="{% static '270540.mp4' %}" type="video/mp4">
+    </video>
+
+</div>
+
+
+
+    <!-- Dark Overlay -->
+    <div class="overlay"></div>
+
+
+    <!-- Main Container -->
+    <div class="main-container">
+
+        <!-- Header -->
+        <div class="top">
+
+            <div class="logo">
+                SISTEC
+            </div>
+
+            <p class="subtitle">
+                Sagar Institute of Science and Technology
+            </p>
+
+            <h1>
+                Welcome to Our College Portal
+            </h1>
+
+            <p class="tagline">
+                Learn • Explore • Grow • Succeed
+            </p>
+
+        </div>
+
+
+        <!-- Navigation Buttons -->
+        <div class="buttons">
+
+            <a href="{% url 'Main' %}">
+                <button class="nav-btn home">
+                    <span>⌂</span>
+                    Main
+                </button>
+            </a>
+
+            <a href="{% url 'Sistec' %}">
+                <button class="nav-btn">
+                    <span>🎓</span>
+                    SISTEC
+                </button>
+            </a>
+
+            <a href="{% url 'Lnct' %}">
+                <button class="nav-btn">
+                    <span>🏫</span>
+                    LNCT
+                </button>
+            </a>
+
+            <a href="{% url 'Oist' %}">
+                <button class="nav-btn">
+                    <span>📚</span>
+                    OIST
+                </button>
+            </a>
+
+        </div>
+
+
+        <!-- Welcome Message -->
+        <div class="welcome-box">
+
+            <h2>Explore Your Future</h2>
+
+            <p>
+                Discover educational information, courses,
+                facilities and opportunities through our college portal.
+            </p>
+
+            <a href="{% url 'Sistec' %}">
+                <button class="explore-btn">
+                    Explore Now →
+                </button>
+            </a>
+
+        </div>
+
+
+        <!-- Footer -->
+        <div class="footer">
+
+            <p>
+                © 2026 College Portal
+            </p>
+
+            <p>
+                Designed with Django & HTML/CSS
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
